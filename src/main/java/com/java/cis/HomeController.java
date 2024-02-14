@@ -16,7 +16,7 @@ public class HomeController {
     /**
      * Simply selects the home view to render by returning its name.
      */
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String home(Locale locale, Model model) {
         System.out.println("Home Page Requested, locale = " + locale);
         Date date = new Date();
@@ -28,7 +28,6 @@ public class HomeController {
 
         return "home";
     }
-
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public String user(@Validated User user, Model model) {
         System.out.println("User Page Requested");
@@ -36,9 +35,3 @@ public class HomeController {
         return "user";
     }
 }
-
-// Dispatcher Servlet
-// View Resolver
-// mvc
-
-
